@@ -1,0 +1,104 @@
+- answer: There are 5 rows in the customer table.
+  input: How many rows are in the customer table?
+  sql_cmd: SELECT count(*) FROM customer;
+  sql_result: '[(5,)]'
+  table_info: |
+    CREATE OR REPLACE TABLE customer
+    (
+        CUSTOMER_ID CHAR(50)NOT NULL,
+        CUSTOMER_FNAME CHAR(50),
+        CUSTOMER_LNAME CHAR(50),
+        CONSTRAINT CUSTOMER_PK PRIMARY KEY (CUSTOMER_ID)
+    )
+
+    /*
+    2 rows from customer table:
+    "CUSTOMER_ID"	"CUSTOMER_FNAME"	"CUSTOMER_LNAME"
+    "1"	"Netra"	"Hegde"
+    "2"	"Dipti"	"Tanwani"
+    */
+
+- answer: There are 3 rows in the stores table.
+  input: How many rows are in the stores table?
+  sql_cmd: SELECT count(*) FROM stores;
+  sql_result: '[(3,)]'
+  table_info: |
+    CREATE OR REPLACE TABLE stores
+    (
+        STORE_ID CHAR(50)NOT NULL,
+        CITY VARCHAR(50),
+        COUNTRY VARCHAR(50),
+        CONSTRAINT LOCATION_PK PRIMARY KEY (STORE_ID)
+    )
+
+    /*
+    2 rows from stores table:
+    "STORE_ID"	"CITY"	"COUNTRY"
+    "10"	"Bangalore"	"India"
+    "20"	"Pune"	"India"
+    */
+    
+- answer: There are 5 rows in the product table.
+  input: How many rows are in the product table?
+  sql_cmd: SELECT count(*) FROM product;
+  sql_result: '[(5,)]'
+  table_info: |
+    CREATE OR REPLACE TABLE product
+    (
+        PRODUCT_ID CHAR(50)NOT NULL,
+        NAME CHAR(50),
+        DESCRIPTION VARCHAR(100),
+        PRICE NUMBER,
+        CONSTRAINT PRODUCT_PK PRIMARY KEY (PRODUCT_ID)
+    )
+
+    /*
+    2 rows from product table:
+    "PRODUCT_ID"	"NAME"	"DESCRIPTION"	"PRICE"
+    "100"	"AWS"	"Technical book"	"250"
+    "500"	"MS-Copilot"	"GEN AI book"	"400"
+    */
+    
+- answer: There are 4 rows in the date table.
+  input: How many rows are in the date table?
+  sql_cmd: SELECT count(*) FROM date;
+  sql_result: '[(4,)]'
+  table_info: |
+    CREATE OR REPLACE TABLE date
+    (
+        DATE_ID CHAR(50)NOT NULL,
+        MONTH CHAR(50),
+        YEAR VARCHAR(100),
+        CONSTRAINT DATE_PK PRIMARY KEY (DATE_ID)
+    )
+
+    /*
+    2 rows from date table:
+    "DATE_ID"	"MONTH"	"YEAR"
+    "130"	"Mar"	"2024"
+    "140"	"Apr"	"2024"
+    */   
+    
+- answer: There are 3 rows in the orders table.
+  input: How many rows are in the orders table?
+  sql_cmd: SELECT count(*) FROM orders;
+  sql_result: '[(3,)]'
+  table_info: |
+    CREATE OR REPLACE TABLE orders
+    (
+        ORDER_ID CHAR(50)NOT NULL,
+        CUSTOMER_ID CHAR(50)NOT NULL,
+        PRODUCT_ID CHAR(50)NOT NULL,
+        STORE_ID CHAR(50)NOT NULL,
+        DATE_ID CHAR(50)NOT NULL,
+        QUANTITY NUMBER,
+        AMOUNT NUMBER,
+        CONSTRAINT ORDER_PK PRIMARY KEY (ORDER_ID)
+    )
+
+    /*
+    2 rows from orders table:
+    "ORDER_ID"	"CUSTOMER_ID"	"PRODUCT_ID"	"STORE_ID"	"DATE_ID"	"QUANTITY"	"AMOUNT"
+    "210"	"1"	"200"	"10"	"140"	"1"	"500"
+    "220"	"4"	"500"	"20"	"130"	"3"	"1200"
+    */    
