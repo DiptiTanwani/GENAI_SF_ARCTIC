@@ -1,0 +1,9 @@
+snowflake_account="dvdjvwb-ik29782"
+username=netravatihegde
+password=IBMaws2024
+database=TECHNOVA
+schema=PUBLIC
+role=ACCOUNTADMIN
+tables=["orders","customer","stores","product","date"]
+aws_cli_profile=default
+REPLICATE_API_TOKEN=r8_Z9VTSs6E1Q3SAdLolQlW1GZ58SQL1BN1b2FYD
