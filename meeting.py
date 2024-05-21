@@ -5,8 +5,6 @@ import os
 
 replicate_api = st.secrets['REPLICATE_API_TOKEN']
 
-#os.environ["REPLICATE_API_TOKEN"] = 'r8_Z9VTSs6E1Q3SAdLolQlW1GZ58SQL1BN1b2FYD'
-
 # Function for generating Snowflake Arctic response
 def generate_arctic_response():
     prompt = []
